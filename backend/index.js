@@ -1,4 +1,4 @@
-const apiKey = "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"
+const apiKey = ""
 const { Configuration, OpenAIApi } = require("openai");
 const express = require('express')
 var cors = require('cors')
