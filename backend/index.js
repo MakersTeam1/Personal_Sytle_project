@@ -22,7 +22,7 @@ app.use(express.urlencoded({ extended: true })) // for parsing application/x-www
 
 // POST method route
 app.post('/fortuneTell', async function (req, res) {
-    let { myDateTime, userMessages, assistantMessages} = req.body
+    let {userMessages, assistantMessages, userage, userheight, usercolor} = req.body
 
     let todayDateTime = new Date().toLocaleString('ko-KR', { timeZone: 'Asia/Seoul' });
 

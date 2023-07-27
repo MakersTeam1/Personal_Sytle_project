@@ -95,11 +95,11 @@
         <img src="doge.jpg" alt="chatdoge">
         <h3>개인정보를 입력해주세요.</h3>
         <label for="text">나이</label>
-        <input id="age">
+        <input id="userage">
         <label for="text">키(cm)</label>
-        <input id="height">
+        <input id="userheight">
         <label for="color">잘 어울리는 색</label>
-        <select id="color" name="color">
+        <select id="usercolor" name="usercolor">
             <option value="#FFE4C4" style="background-color: #FFE4C4;">베이지</option>
             <option value="#FFD700" style="background-color: #FFD700;">골드</option>
             <option value="#006400" style="background-color: #006400; color: #FFFFFF;">다크 그린</option>
@@ -131,16 +131,18 @@
         const chatBox = document.querySelector('.chat-box');
         let userMessages = [];
         let assistantMessages = [];
-        let myDateTime = ''
+        let userage; // 전역 변수로 변경
+        let userheight; // 전역 변수로 변경
+        let usercolor; // 전역 변수로 변경
 
         function spinner() {
             document.getElementById('loader').style.display = "block";
         }
 
         function start() {
-            const userage = document.getElementById('age').value;
-            const userheight = document.getElementById('height').value;
-            const usercolor = document.getElementById('color').value;
+            userage = document.getElementById('userage').value;
+            userheight = document.getElementById('userheight').value;
+            usercolor = document.getElementById('usercolor').value;
             if (userage === '') {
                 alert('나이를 입력해주세요.');
                 return;
