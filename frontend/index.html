@@ -90,39 +90,28 @@
 
 <body>
     <div id="intro" class="intro-container">
-        <h1>운세를 알려드립니다.</h1>
+        <h1>퍼스널 컬러와 스타일링</h1>
+        <h4>챗봇을 이용해서 당신의 퍼스널 컬러를 진단해보세요 !</h4>
         <img src="doge.jpg" alt="chatdoge">
-        <label for="date">생년월일</label>
-        <input id="date" type="date">
-        <label for="hour">태어난 시간</label>
-        <select id="hour" name="hour">
-            <option value="">모름</option>
-            <option value="00">00</option>
-            <option value="01">01</option>
-            <option value="02">02</option>
-            <option value="03">03</option>
-            <option value="04">04</option>
-            <option value="05">05</option>
-            <option value="06">06</option>
-            <option value="07">07</option>
-            <option value="08">08</option>
-            <option value="09">09</option>
-            <option value="10">10</option>
-            <option value="11">11</option>
-            <option value="12">12</option>
-            <option value="13">13</option>
-            <option value="14">14</option>
-            <option value="15">15</option>
-            <option value="16">16</option>
-            <option value="17">17</option>
-            <option value="18">18</option>
-            <option value="19">19</option>
-            <option value="20">20</option>
-            <option value="21">21</option>
-            <option value="22">22</option>
-            <option value="23">23</option>
+        <h3>개인정보를 입력해주세요.</h3>
+        <label for="text">나이</label>
+        <input id="age">
+        <label for="text">키(cm)</label>
+        <input id="height">
+        <label for="color">잘 어울리는 색</label>
+        <select id="color" name="color">
+            <option value="#FFE4C4" style="background-color: #FFE4C4;">베이지</option>
+            <option value="#FFD700" style="background-color: #FFD700;">골드</option>
+            <option value="#006400" style="background-color: #006400; color: #FFFFFF;">다크 그린</option>
+            <option value="#800000" style="background-color: #800000; color: #FFFFFF;">마룬</option>
+            <option value="#FF6347" style="background-color: #FF6347;">코랄</option>
+            <option value="#4682B4" style="background-color: #4682B4; color: #FFFFFF;">스틸 블루</option>
+            <option value="#FF69B4" style="background-color: #FF69B4;">핑크</option>
+            <option value="#8B008B" style="background-color: #8B008B; color: #FFFFFF;">다크 마젠타</option>
+            <option value="#FFA07A" style="background-color: #FFA07A;">라이트 샐몬</option>
+            <option value="#2F4F4F" style="background-color: #2F4F4F; color: #FFFFFF;">스레이트 그레이</option>
         </select>
-        <button onclick="start()">오늘의 운세보기</button>
+        <button onclick="start()">상담하러 가기</button>
     </div>
     <div id="chat" class="chat-container" style="display: none;">
         <div class="chat-box">
@@ -149,13 +138,21 @@
         }
 
         function start() {
-            const date = document.getElementById('date').value;
-            const hour = document.getElementById('hour').value;
-            if (date === '') {
-                alert('생년월일을 입력해주세요.');
+            const userage = document.getElementById('age').value;
+            const userheight = document.getElementById('height').value;
+            const usercolor = document.getElementById('color').value;
+            if (userage === '') {
+                alert('나이를 입력해주세요.');
                 return;
             }
-            myDateTime = date + hour;
+            if (userheight === '') {
+                alert('키를 입력해주세요.');
+                return;
+            }
+            if (usercolor === '') {
+                alert('잘 어울리는 색을 선택해주세요.');
+                return;
+            }
 
             document.getElementById("intro").style.display = "none";
             document.getElementById("chat").style.display = "block";
@@ -181,7 +178,9 @@
                     'Content-Type': 'application/json'
                 },
                 body: JSON.stringify({
-                    myDateTime: myDateTime,
+                    userage : userage,
+                    userheight : userheight,
+                    usercolor : usercolor,
                     userMessages: userMessages,
                     assistantMessages: assistantMessages,
                 })
