@@ -1,4 +1,4 @@
-const apiKey = "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"
+const apiKey = ""
 const serverless = require('serverless-http');
 const { Configuration, OpenAIApi } = require("openai");
 const express = require('express')
