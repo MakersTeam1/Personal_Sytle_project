@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <title>스타일리</title>
     <link rel="stylesheet" href="index.css">
+    <link rel="icon" type = "image/jpg" href="favicon.jpg">
 </head>
 
 <body>
     <div id="intro" class="intro-container">
         <h1>퍼스널 컬러와 스타일링</h1>
         <h4>챗봇 '스타일리'을 이용해서 당신의 퍼스널 컬러를 진단해보세요 !</h4>
-        <img src="doge.jpg" alt="chatdoge">
+        <img src="styly.jpg" alt="chatdoge">
         <h3>개인정보를 입력해주세요.</h3>
         <label for="text">나이</label>
         <input id="userage">
@@ -29,6 +30,7 @@
             <option value="#FFA07A" style="background-color: #FFA07A;">라이트 샐몬</option>
             <option value="#2F4F4F" style="background-color: #2F4F4F; color: #FFFFFF;">스레이트 그레이</option>
         </select>
+        <p>개인정보는 절대 저장하지 않습니다</p>
         <button onclick="location.href='test.html'">퍼스널 컬러 자가진단</button>
         <button onclick="start()">스타일리와 상담하러 가기</button>
     </div>
@@ -45,6 +47,7 @@
             <input type="text" placeholder="Type your message here...">
             <button id="btn" onclick="spinner()">Send</button>
         </div>
+        <button onclick="location.href='index.html'" class="home-button">홈으로 돌아가기</button>
     </div>
     <script>
         const chatBox = document.querySelector('.chat-box');
@@ -93,7 +96,7 @@
 
             chatInput.value = '';
 
-            const response = await fetch('http://localhost:3000/styly', {
+            const response = await fetch('https://4lg3s2ocvy2ffcq3svl4koifve0qjewh.lambda-url.us-east-1.on.aws/styly', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
