@@ -14,8 +14,7 @@
 
 body {
   font-family: 'ImcreSoojin';
-  background-color: #e6f7ec;
-}
+  background: radial-gradient(177.71% 109.85% at 11.04% 14.60%, #F5F7FA 0%, #CBD5E6 67.33%, #C3CFE2 92.79%) no-repeat center;}
 
 .file-upload {
     padding: 15% 3%;
