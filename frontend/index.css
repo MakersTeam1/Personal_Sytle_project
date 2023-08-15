@@ -136,6 +136,20 @@ body {
       padding: 0;
   }
 
+  .chat-message.user {
+    background-color: #49BB8A;
+    color: #ffffff;
+    align-self: flex-start;
+    margin-left: 60px;
+  }
+
+/* Add styles for Assistant messages */
+  .chat-message.assistant {
+    background-color: #f1f1f1;
+    align-self: flex-end;
+    margin-right: 60px;
+  }
+
   .chat-input {
       display: flex;
       margin-top: 20px;

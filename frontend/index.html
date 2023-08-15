@@ -36,7 +36,7 @@
     </div>
     <div id="chat" class="chat-container" style="display: none;">
         <div class="chat-box">
-            <div class="chat-message">
+            <div class="chat-message assistant">
                 <p class="assistant">퍼스널 컬러와 스타일링에 대해 궁금한 점을 물어보세요!</p>
             </div>
         </div>
@@ -44,8 +44,8 @@
             <i class="fa fa-spinner fa-spin"></i>
         </div>
         <div class="chat-input">
-            <input type="text" placeholder="Type your message here...">
-            <button id="btn" onclick="spinner()">Send</button>
+            <input type="text" placeholder="스타일리에게 하고 싶은 말을 적어주세요!">
+            <button id="btn" onclick="spinner()">보내기</button>
         </div>
         <button onclick="location.href='index.html'" class="home-button">홈으로 돌아가기</button>
     </div>
@@ -85,7 +85,7 @@
         const sendMessage = async () => {
             const chatInput = document.querySelector('.chat-input input');
             const chatMessage = document.createElement('div');
-            chatMessage.classList.add('chat-message');
+            chatMessage.classList.add('chat-message', 'user');
             chatMessage.innerHTML = `
     <p>${chatInput.value}</p>
   `;
@@ -117,7 +117,7 @@
             assistantMessages.push(data.assistant);
 
             const astrologerMessage = document.createElement('div');
-            astrologerMessage.classList.add('chat-message');
+            astrologerMessage.classList.add('chat-message', 'assistant');
             astrologerMessage.innerHTML = `
     <p class='assistant'>${data.assistant}</p>
   `;
