@@ -5,19 +5,38 @@
     <title>스타일리</title>
     <link rel="stylesheet" href="index.css">
     <link rel="icon" type = "image/jpg" href="favicon.jpg">
+   
+    <!--font-->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=Dela+Gothic+One&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <div id="intro" class="intro-container">
-        <h1>퍼스널 컬러와 스타일링</h1>
-        <h4>챗봇 '스타일리'을 이용해서 당신의 퍼스널 컬러를 진단해보세요 !</h4>
-        <img src="styly.jpg" alt="chatdoge">
-        <h3>개인정보를 입력해주세요.</h3>
-        <label for="text">나이</label>
+    
+    <div class = "main">
+        <p class="sub-title">The perfect Styling service you've been looking for</p>
+        <P class="title">STYLY</P>
+    </div>
+    
+   
+    <div class="main-display">
+    <div class="info">
+    <div class="squr">
+     <h3>personal information</h3>
+    <div class="f-tb">
+        <label for="text">age</label>
         <input id="userage">
-        <label for="text">키(cm)</label>
+    </div>
+
+    <div class="s-tb">
+        <label for="text">height</label>
         <input id="userheight">
-        <label for="color">잘 어울리는 색</label>
+    </div>
+
+    <div class="t-tb">
+        <label for="color">well-matched color</label>
         <select id="usercolor" name="usercolor">
             <option value="#FFE4C4" style="background-color: #FFE4C4;">베이지</option>
             <option value="#FFD700" style="background-color: #FFD700;">골드</option>
@@ -30,10 +49,26 @@
             <option value="#FFA07A" style="background-color: #FFA07A;">라이트 샐몬</option>
             <option value="#2F4F4F" style="background-color: #2F4F4F; color: #FFFFFF;">스레이트 그레이</option>
         </select>
-        <p>개인정보는 절대 저장하지 않습니다</p>
-        <button onclick="location.href='test.html'">퍼스널 컬러 자가진단</button>
-        <button onclick="start()">스타일리와 상담하러 가기</button>
+        </div>
+        <p class="ano">We do not collect your personal information</p>
     </div>
+</div>
+
+
+    
+        <div class="main-button">
+        <button onclick="location.href='test.html'" class="PCA">AI Personal Color Analysis </button>
+        <button onclick="start()" class="CWS">Chat With STYLY</button>
+        <button class="PF">Personalised fashion</button>
+        </div>
+
+    </div>
+    <p class="sub-exp">styly will work hard to help you find the style that suits you best. styly will help you find the most perfect style you've never met. More accurate diagnosis service using artificial intelligence. Includes chat using chat-gpt. </p>
+
+
+</div>
+
+
     <div id="chat" class="chat-container" style="display: none;">
         <div class="chat-box">
             <div class="chat-message assistant">
