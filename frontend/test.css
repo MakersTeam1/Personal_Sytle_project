@@ -13,15 +13,14 @@
 }
 
 body {
-  font-family: 'ImcreSoojin';
+  font-family: 'Almarai';
   background: radial-gradient(177.71% 109.85% at 11.04% 14.60%, #F5F7FA 0%, #CBD5E6 67.33%, #C3CFE2 92.79%) no-repeat center;}
 
 .file-upload {
     padding: 15% 3%;
     margin: 0 auto;
-    border-radius: 10px;
     border: solid 1.5px #f6f7fa;
-    background-color: #f6f7fa;
+    background: #FFF;
 }
 
 .file-upload-btn {
@@ -179,20 +178,25 @@ body {
 }
 
 .title {
-  font-family: 'ImcreSoojin';
-  line-height: 1.67;
+  color: #000;
   text-align: center;
-  color: #35465d;
-  margin-bottom: 10px;
-  font-size: 350%;
+  font-family: 'Dela Gothic One';
+  font-size: 80px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-top: -100px;
 }
 
 .subtitle {
-  font-family: 'ImcreSoojin';
-  line-height: 1.53;
+  color: #000;
   text-align: center;
-  color: #35465d;
-  font-size: 200%;
+  font-family: 'Almarai';
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  margin-bottom: 40px;
 }
 
 /* On screens that are 600px or less, set the background color to olive */
@@ -233,13 +237,14 @@ body {
 }
 
 .upload-text {
-    width: 58%;
-      font-family: 'ImcreSoojin';
-    font-size: 1.5rem;
+    width: 100%;
+    font-family: 'Almarai';
+    font-size: 25px;
     line-height: 1.53;
     text-align: center;
-    color: #35465d;
+    color :#000;
     margin: 0 auto;
+    letter-spacing: -1px;   
 }
 
 /* box, bar CSS*/
