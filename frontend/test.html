@@ -56,10 +56,10 @@
             <div id="label-container"></div>
             <div class="image-title-wrap">
                 <button type="button" onclick="removeUpload()" class="remove-image">
+                    Remove
                     <span class="image-title">Uploaded Image</span>
-                    지우기
                 </button>
-                <button onclick="location.href='index.html'" class="home-button">홈으로 돌아가기</button>
+                <button onclick="location.href='index.html'" class="home-button">Return To Home</button>
             </div>
         </div>
     </div>
@@ -165,7 +165,7 @@
                 case "spring warm":
                     resultTitle = "봄 웜톤";
                     resultExplain = "밝고 화사한 피부톤에 어울리는 따뜻하고 화사한 컬러가 매력적이에요. 봄 웜톤은 온화하고 상큼한 이미지를 강조하는데, 연한 파스텔톤부터 노란색, 올리브 그린, 코랄, 베이지 등을 선택하면 어울리며, 여성스러운 꽃무늬, 스트라이프, 도트 패턴이 잘 어울려요.";
-                    resultCeleb = "연예인 중에서는 수지와 박보검이 봄 웜톤에 잘 어울리는 대표적인 예시에요! 🌸🌞";
+                    resultCeleb = "연예인 중에서는 수지와 박보검이 봄 웜톤에 잘 어울리는 대표적인 예시에요! 🌸🌞<br>";
                     resultCeleb += "<br><span class='" + prediction[0].className + "-animal-celeb pt-2 pb-2' style='color: black; font-size: 17px;'>💄추천 화장품💋<br>립: 데이지크 쥬시듀이틴트 14호 피치크러쉬<br>페리페라 잉크무드매트 01호 코랄대주주<br>섀도우: 데이지크 섀도우 팔레트 아이스크림 컬렉션 19호 캔디베리<br>롬앤 베러 댄 아이즈 W02호 말린 복숭아꽃<br>블러셔: 릴리바이레드 러브빔 치크밤 06호 복숭빔<br>VDL 치크스테인 블러셔 07호 미스티 애프리콧</span>";
 
 
@@ -173,14 +173,14 @@
                 case "summer cool":
                     resultTitle = "여름 쿨톤";
                     resultExplain = "시원하고 맑은 피부톤에 어울리는 차가운 컬러가 매력적이에요. 여름 쿨톤은 차분하고 세련된 이미지를 강조하는데, 파스텔 블루, 민트 그린, 라벤더 등을 선택하면 어울리며, 여성스러운 레이스, 도트, 체크 패턴이 잘 어울려요.";
-                    resultCeleb = " 연예인 중에서는 아이유와 송중기가 여름 쿨톤에 잘 어울리는 대표적인 예시에요! ❄️💙";
+                    resultCeleb = " 연예인 중에서는 아이유와 송중기가 여름 쿨톤에 잘 어울리는 대표적인 예시에요! ❄️💙<br>";
                     resultCeleb += "<br><span class='" + prediction[0].className + "-animal-celeb pt-2 pb-2' style='color: black; font-size: 17px;'>💄추천 화장품💋<br>립: 롬앤 쥬시래스팅 32호베어베리스무디<br>무지개맨션 오브제리퀴드 12호 심볼<br>섀도우: 롬앤 베어 레이어 02호 스트로베리무드<br>페리페라 잉크포켓 02호 쿨한여름냄새풀풀<br>블러셔: 웨이크메이크 믹스블러링 볼륨 02호 분위기 쿨<br>뮤드 플러티 블러셔 04호 모브노트</span>";
 
                     break;
                 case "autumn warm":
                     resultTitle = "가을 웜톤";
                     resultExplain = "온화하고 톡 쏘는 피부톤에 어울리는 따뜻하고 화려한 컬러가 매력적이에요. 가을 웜톤은 풍성하고 우아한 이미지를 강조하는데, 머스타드, 브라운, 버건디, 올리브 등을 선택하면 어울리며, 여성스러운 꽃무늬, 동물무늬, 체크 패턴이 잘 어울려요. ";
-                    resultCeleb = "연예인 중에서는 한효주와 박서준이 가을 웜톤에 잘 어울리는 대표적인 예시에요! 🍁🍂";
+                    resultCeleb = "연예인 중에서는 한효주와 박서준이 가을 웜톤에 잘 어울리는 대표적인 예시에요! 🍁🍂<br>";
                     resultCeleb += "<br><span class='" + prediction[0].className + "-animal-celeb pt-2 pb-2' style='color: black; font-size: 17px;'>💄추천 화장품💋<br>립: 3ce 블러워터틴트 레이다운<br>힌스 무드인핸서 마뜨 시그니처미<br>섀도우: 데이지크 섀도우팔레트 03호 누드포션<br>에뛰드하우스 플레이톤 아이팔레트 누드밀크티<br>블러셔: 네이밍 플러피 파우더 블러쉬 헤일로<br>3ce무드레시피 블러쉬 누드피치</span>";
 
 
@@ -188,7 +188,7 @@
                 case "winter cool":
                     resultTitle = "겨울 쿨톤";
                     resultExplain = "선명하고 아름다운 피부톤에 어울리는 차가운 컬러가 매력적이에요. 겨울 쿨톤은 세련되고 고급스러운 이미지를 강조하는데, 스모키 그레이, 블랙, 블루, 레드 등을 선택하면 어울리며, 여성스러운 레이스, 체크, 동물무늬 패턴이 잘 어울려요.";
-                    resultCeleb = "연예인 중에서는 이효리와 강동원이 겨울 쿨톤에 잘 어울리는 대표적인 예시에요! ❄️💎";
+                    resultCeleb = "연예인 중에서는 이효리와 강동원이 겨울 쿨톤에 잘 어울리는 대표적인 예시에요! ❄️💎<br>";
                     resultCeleb += "<br><span class='" + prediction[0].className + "-animal-celeb pt-2 pb-2' style='color: black; font-size: 17px;'>💄추천 화장품💋<br>립: 뮤드 글라세 립틴트 08호 콜드체리<br>띰 쉬어매트 리퀴드립 05호 딥베리<br>섀도우: 데이지크 섀도우팔레트 16호 바이올렛 니트<br>웨이크메이크 소프트블러링 02호 생기블러링<br>블러셔: 삐아 라스트블러쉬 06호 로즈블라썸<br>나스 블러쉬 임패션드</span>";
 
 

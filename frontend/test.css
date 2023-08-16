@@ -1,16 +1,36 @@
 @font-face {
-  font-family: 'ImcreSoojin';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.3/ImcreSoojin.woff') format('woff');
-  font-weight: normal;
+  font-family: 'GmarketSans';
+  font-weight: 300;
   font-style: normal;
-}
-
+  src: url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansLight.eot');
+  src: url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansLight.eot?#iefix') format('embedded-opentype'),
+       url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansLight.woff2') format('woff2'),
+       url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansLight.woff') format('woff'),
+       url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansLight.ttf') format("truetype");
+  font-display: swap;
+} 
 @font-face {
-  font-family: 'Pretendard-Regular';
-  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
-  font-weight: 400;
+  font-family: 'GmarketSans';
+  font-weight: 500;
   font-style: normal;
-}
+  src: url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.eot');
+  src: url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.eot?#iefix') format('embedded-opentype'),
+       url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.woff2') format('woff2'),
+       url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.woff') format('woff'),
+       url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.ttf') format("truetype");
+  font-display: swap;
+} 
+@font-face {
+  font-family: 'GmarketSans';
+  font-weight: 700;
+  font-style: normal;
+  src: url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.eot');
+  src: url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.eot?#iefix') format('embedded-opentype'),
+       url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.woff2') format('woff2'),
+       url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.woff') format('woff'),
+       url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.ttf') format("truetype");
+  font-display: swap;
+} 
 
 body {
   font-family: 'Almarai';
@@ -83,7 +103,9 @@ body {
 }
 
 .image-title-wrap {
-  padding: 0 15px 15px 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   color: #222;
 }
 
@@ -97,15 +119,16 @@ body {
 }
 
 .file-upload-image {
-  max-height: 200px;
-  max-width: 200px;
-  margin: auto;
-  padding: 20px;
+  max-width: 400px;
+  margin-top: -200px;
+  margin-bottom: 30px;
 }
 
 .remove-image {
-  width: 200px;
+  font-family: 'Almarai';
+  width: 350px;
   margin: 0;
+
   color: #fff;
   background: #cd4535;
   border: none;
@@ -131,8 +154,9 @@ body {
 }
 
 .home-button {
-  width: 200px;
-  margin: 0;
+  margin-top: 10px;
+  font-family: 'Almarai';
+  width: 350px;
   color: #fff;
   background:#32baca;
   border: none;
@@ -347,38 +371,59 @@ body {
 
 .animal-explain {
   font-size: 1.5rem;
+  font-family: 'GmarketSans';
+  font-weight: 300;
 }
 
 .spring.warm-animal-title {
+  font-family: 'GmarketSans';
+  font-weight: 700;
   color: #3ba363;
 }
 .spring.warm-animal-celeb {
   color: #3ba363;
   font-size: 1.4rem;
+  font-family: 'GmarketSans';
 }
 
 
 .summer.cool-animal-title {
+  font-family: 'GmarketSans';
+    font-weight: 700;
   color: #548dd4;
 }
 .summer.cool-animal-celeb {
   color: #548dd4;
   font-size: 1.4rem;
+  font-family: 'GmarketSans';
 }
 
 .autumn.warm-animal-title {
+  font-family: 'GmarketSans';
+  font-weight: 700;
   color: #ff6c0a;
 }
 .autumn.warm-animal-celeb {
   color: #ff6c0a;
   font-size: 1.4rem;
+  font-family: 'GmarketSans';
 }
 
 
 .winter.cool-animal-title {
+  font-family: 'GmarketSans';
+  font-weight: 700;
   color: #e56995;
 }
 .winter.cool-animal-celeb {
   color: #e56995;
   font-size: 1.4rem;
+  font-family: 'GmarketSans';
+}
+
+#label-container div{
+  display: flex;
+  margin-bottom: 20px;
+  font-family: 'GmarketSans';
+  font-size: 1.3rem;
 }
