@@ -36,6 +36,8 @@ body {
   font-family: 'Almarai';
   background: radial-gradient(177.71% 109.85% at 11.04% 14.60%, #F5F7FA 0%, #CBD5E6 67.33%, #C3CFE2 92.79%) no-repeat center;}
 
+
+
 .file-upload {
     padding: 15% 3%;
     margin: 0 auto;
@@ -125,16 +127,17 @@ body {
 }
 
 .remove-image {
-  font-family: 'Almarai';
+  font-family: 'GmarketSans';
+  font-size: 14px;
+  font-weight: 100px;
   width: 350px;
-  margin: 0;
-
+  height: 50px;
   color: #fff;
-  background: #cd4535;
+  background: #6A82A8;
   border: none;
   padding: 10px;
-  border-radius: 4px;
-  border-bottom: 4px solid #b02818;
+  border-radius: 98px;
+  border-bottom: 4px solid #536582;
   transition: all .2s ease;
   outline: none;
   text-transform: uppercase;
@@ -142,7 +145,7 @@ body {
 }
 
 .remove-image:hover {
-  background: #c13b2a;
+  background: #96a4ba;
   color: #ffffff;
   transition: all .2s ease;
   cursor: pointer;
@@ -157,12 +160,13 @@ body {
   margin-top: 10px;
   font-family: 'Almarai';
   width: 350px;
+  height: 50px;
   color: #fff;
-  background:#32baca;
+  background: #6A82A8;
   border: none;
   padding: 10px;
-  border-radius: 4px;
-  border-bottom: 4px solid #22aaBA;
+  border-radius: 98px;
+  border-bottom: 4px solid #536582;
   transition: all .2s ease;
   outline: none;
   text-transform: uppercase;
@@ -170,7 +174,7 @@ body {
 }
 
 .home-button:hover {
-  background: #12aaBA;
+  background: #96a4ba;
   color: #ffffff;
   transition: all .2s ease;
   cursor: pointer;
@@ -222,6 +226,24 @@ body {
   line-height: normal;
   margin-bottom: 40px;
 }
+
+.load-explain{
+  font-family: 'GmarketSans';
+}
+
+@keyframes bounce {
+  0%, 100% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(-10px);
+  }
+}
+
+.animated.bounce {
+  animation: bounce 1s infinite;
+}
+
 
 /* On screens that are 600px or less, set the background color to olive */
 @media screen and (max-width: 600px) {

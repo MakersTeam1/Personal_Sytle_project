@@ -52,6 +52,13 @@
         </div>
         <div class="file-upload-content">
             <img class="file-upload-image" id="face-image" src="#" alt="your image" />
+            <!--Loader-->
+            <div id="loading" class="animated bounce">
+                <div class="spinner-border" role="status">
+                    <span class="sr-only">Loading...</span>
+                </div>
+                <p class="load-explain">AI가 당신의 퍼스널컬러를 분석중입니다 !</p>
+            </div>
             <p class="result-message"></p>
             <div id="label-container"></div>
             <div class="image-title-wrap">
@@ -86,10 +93,8 @@
 
                 reader.onload = function (e) {
                     $('.image-upload-wrap').hide();
-
                     $('.file-upload-image').attr('src', e.target.result);
                     $('.file-upload-content').show();
-
                     $('.image-title').html(input.files[0].name);
                 };
 
@@ -97,12 +102,19 @@
                 init().then(() => {
                     console.log("hello");
                     predict();
+                    $('#loading').hide();
                 });
 
             } else {
                 removeUpload();
             }
         }
+
+        function showResultMessage(message) {
+            document.getElementById('loading').style.display = "none";
+            $('.result-message').html(message);
+        }
+        
 
         function removeUpload() {
             $('.file-upload-input').replaceWith($('.file-upload-input').clone());
