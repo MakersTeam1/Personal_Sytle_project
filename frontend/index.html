@@ -31,8 +31,11 @@
     </div>
 
     <div class="s-tb">
-        <label for="text">height</label>
-        <input id="userheight">
+        <label for="gender">gender</label>
+        <select id="usergender" name="usergender">
+            <option>남자</option>
+            <option>여자</option>
+        </select>
     </div>
 
     <div class="t-tb">
@@ -59,7 +62,7 @@
         <div class="main-button">
         <button onclick="location.href='test.html'" class="PCA">AI Personal Color Analysis </button>
         <button onclick="start()" class="CWS">Chat With STYLY</button>
-        <button class="PF">Personalised fashion</button>
+        <button onclick="recommend()" >Personalised fashion</button>
         </div>
 
     </div>
@@ -89,23 +92,33 @@
         let userMessages = [];
         let assistantMessages = [];
         let userage; // 전역 변수로 변경
-        let userheight; // 전역 변수로 변경
+        let usergender; // 전역 변수로 변경
         let usercolor; // 전역 변수로 변경
 
         function spinner() {
             document.getElementById('loader').style.display = "block";
         }
 
+        function recommend() {
+            const usergender = document.getElementById('usergender').value;
+            const userage = document.getElementById('userage').value;
+
+            sessionStorage.setItem("usergender", usergender);
+            sessionStorage.setItem("userage", userage);
+
+            window.location.href = "recommend.html"; // recommend.html로 이동
+        }
+
         function start() {
             userage = document.getElementById('userage').value;
-            userheight = document.getElementById('userheight').value;
+            usergender = document.getElementById('usergender').value;
             usercolor = document.getElementById('usercolor').value;
             if (userage === '') {
                 alert('나이를 입력해주세요.');
                 return;
             }
-            if (userheight === '') {
-                alert('키를 입력해주세요.');
+            if (usergender === '') {
+                alert('성별을 입력해주세요.');
                 return;
             }
             if (usercolor === '') {
@@ -138,7 +151,7 @@
                 },
                 body: JSON.stringify({
                     userage : userage,
-                    userheight : userheight,
+                    usergender : usergender,
                     usercolor : usercolor,
                     userMessages: userMessages,
                     assistantMessages: assistantMessages,
