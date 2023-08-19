@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>쇼핑몰 추천</title>
+</head>
+
+<body>
+    <h1>쇼핑몰 추천</h1>
+
+    <div id="recommendation">
+        <!-- 추천 쇼핑몰을 표시할 공간 -->
+    </div>
+
+    <script>
+        // 성별과 나이 정보를 sessionStorage에서 가져옴
+        const usergender = sessionStorage.getItem("usergender");
+        const userage = parseInt(sessionStorage.getItem("userage"));
+
+        // 추천 쇼핑몰 리스트
+        const shoppingMalls = {
+            "남자": {
+                "10s": ["aboki"],
+                "20s-30s": ["coor (오래입을 제품, 10만원 정도 가격대)", "빈티지톡", "yurue(남친룩)"],
+                "40s": ["구아뽀"]
+            },
+            "여자": {
+                "10s": ["바온(아메카지)", "팜므뮤즈(빈티지, 러블리)", "본지샵(캐주얼)"],
+                "20s": ["바온(아메카지)", "제이탐탐(페미닌)", "오도어(섹시힙, 트렌디)", "샵베일(트렌디, 데일리힙)", "스니즈(걸리시, 키치)"],
+                "30s": ["엠언어스(베이직, 놈코어)", "뮬랑(포멀, 클래식)", "플라시드(미니멀 시크)", "베리유(페미닌, 프렌치시크)"],
+                "40s": ["그레이시크(꾸안꾸, 데일리룩)-77사이즈"],
+                "50s": ["안나앤블루(클래식캐주얼, 프렌치시크)"],
+                "50-60s": ["더애수(꾸안꾸, 데일리룩)"]
+            }
+        };
+
+        // 추천 쇼핑몰을 표시하는 함수
+        function showRecommendations() {
+            const recommendationDiv = document.getElementById("recommendation");
+            const ageGroup = getAgeGroup(userage);
+            
+            if (shoppingMalls[usergender] && shoppingMalls[usergender][ageGroup]) {
+                const recommendations = shoppingMalls[usergender][ageGroup];
+                const recommendationList = document.createElement("ul");
+    
+                for (const mall of recommendations) {
+                    const listItem = document.createElement("li");
+                    const mallLink = document.createElement("a");
+                    mallLink.href = getMallHomepage(mall); // 쇼핑몰 홈페이지 링크 설정
+                    mallLink.textContent = mall; // 쇼핑몰 이름 추가
+                    listItem.appendChild(mallLink); // 쇼핑몰 이름을 리스트 아이템에 추가
+                    listItem.appendChild(createHomepageButton(mallLink)); // 홈페이지 버튼 추가
+                    recommendationList.appendChild(listItem);
+                }
+    
+                recommendationDiv.appendChild(recommendationList);
+            } else {
+                recommendationDiv.textContent = "해당 성별 및 나이대의 추천 쇼핑몰 정보가 없습니다.";
+            }
+        }
+
+
+        // 나이대 구분 함수
+        function getAgeGroup(age) {
+            if (age >= 10 && age < 20) {
+                return "10s";
+            } else if (age >= 20 && age < 30) {
+                return "20s-30s";
+            } else if (age >= 30 && age < 40) {
+                return "20s-30s"; // 30대도 20대로 처리
+            } else if (age >= 40 && age < 50) {
+                return "40s";
+            } else if (age >= 50 && age < 60) {
+                return "50s";
+            } else if (age >= 60) {
+                return "50-60s";
+            } else {
+                return "unknown";
+            }
+        }
+
+        // 쇼핑몰별 홈페이지 링크를 반환하는 함수
+        function getMallHomepage(mallName) {
+            // 여기에서 각 쇼핑몰에 대한 홈페이지 링크를 설정해주세요
+            const homepageLinks = {
+                "바온(아메카지)": "https://ba-on.com/",
+                "팜므뮤즈(빈티지, 러블리)": "https://femmemuse.co.kr/",
+                "본지샵(캐주얼)": "https://bonzishop.com/",
+                "제이탐탐(페미닌)" : "https://jtamtam.co.kr/",
+                "오도어(섹시힙, 트렌디)":"https://m.odorshop.co.kr/",
+                "샵베일(트렌디, 데일리힙)":"https://m.shop-veil.co.kr/",
+                "스니즈(걸리시, 키치)":"https://sneeze.kr/",
+                "엠언어스(베이직, 놈코어)": "https://mnus.kr/",
+                "뮬랑(포멀, 클래식)": "https://mullang.com/",
+                "플라시드(미니멀 시크)": "http://placid.kr/",
+                "베리유(페미닌, 프렌치시크)": "https://veryyou.co.kr/?gclid=Cj0KCQjw0IGnBhDUARIsAMwFDLmOl6Uih977lYUm0XHoR6b1se87SXEkNJ4sK3rrGTd-TCt222-Dwv4aArLQEALw_wcB",
+                "그레이시크(꾸안꾸, 데일리룩)-77사이즈": "https://graychic.co.kr/",
+                "안나앤블루(클래식캐주얼, 프렌치시크)": "http://www.annanblue.com/",
+                "더애수(꾸안꾸, 데일리룩)": "https://aesoo.co.kr/",
+                "aboki": "https://www.aboki.net/",
+                "coor (오래입을 제품, 10만원 정도 가격대)": "https://coor.kr/",
+                "빈티지톡": "https://www.vintagetalk.co.kr/?gclid=Cj0KCQjw0IGnBhDUARIsAMwFDLlnG5uPLc6WaBovwoBxiLB8sU0q7fKlYESSmaj2RNrH-BQxPQ2sdOkaAk5qEALw_wcB",
+                "yurue(남친룩)": "https://yurue.co.kr/",
+                "구아뽀": "https://www.guapo2u.com/"
+            };
+
+            // 링크가 없으면 "#"를 반환하도록 설정
+            return homepageLinks[mallName] || "#";
+        }
+
+        // 홈페이지 버튼을 생성하는 함수
+        function createHomepageButton(linkElement) {
+            const button = document.createElement("button");
+            button.textContent = "홈페이지로 이동";
+            button.onclick = function () {
+                window.location.href = linkElement.href;
+            };
+            return button;
+        }
+
+
+        // 페이지 로드 시 추천 쇼핑몰을 표시
+        window.onload = showRecommendations;
+    </script>
+</body>
+
+</html>
