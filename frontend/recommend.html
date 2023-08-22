@@ -2,17 +2,13 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <
-    link rel="stylesheet" href="recommend.css">
+    <link rel="stylesheet" href="recommend.css">
     <title>쇼핑몰 추천</title>
     
     <!--font-->
-    <
-    link rel="preconnect" href="https://fonts.googleapis.com">
-    <
-    link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <
-    link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=Dela+Gothic+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=Dela+Gothic+One&display=swap" rel="stylesheet">
 
 </head>
 
@@ -32,17 +28,17 @@
         const shoppingMalls = {
             "남자": {
                 "10s": ["aboki"],
-                "20s": ["coor (오래입을 제품, 10만원 정도 가격대)", "빈티지톡", "yurue(남친룩)"],
-                "30s": ["coor (오래입을 제품, 10만원 정도 가격대)", "빈티지톡", "yurue(남친룩)"],
+                "20s": ["coor (오래입을 제품)", "빈티지톡", "yurue(남친룩)"],
+                "30s": ["coor (오래입을 제품)", "빈티지톡", "yurue(남친룩)"],
                 "40s": ["구아뽀"]
             },
             "여자": {
                 "10s": ["바온(아메카지)", "팜므뮤즈(빈티지, 러블리)", "본지샵(캐주얼)"],
-                "20s": ["바온(아메카지)", "제이탐탐(페미닌)", "오도어(섹시힙, 트렌디)", "샵베일(트렌디, 데일리힙)", "스니즈(걸리시, 키치)"],
-                "30s": ["엠언어스(베이직, 놈코어)", "뮬랑(포멀, 클래식)", "플라시드(미니멀 시크)", "베리유(페미닌, 프렌치시크)"],
-                "40s": ["그레이시크(꾸안꾸, 데일리룩)-77사이즈"],
-                "50s": ["안나앤블루(클래식캐주얼, 프렌치시크)"],
-                "50-60s": ["더애수(꾸안꾸, 데일리룩)"]
+                "20s": ["바온(아메카지)", "제이탐탐(페미닌)", "오도어(섹시힙)", "샵베일(트렌디)"],
+                "30s": ["엠언어스(베이직)", "뮬랑(포멀)", "플라시드(미니멀 시크)", "베리유(페미닌)"],
+                "40s": ["그레이시크(꾸안꾸)"],
+                "50s": ["안나앤블루(클래식캐주얼)"],
+                "50-60s": ["더애수(꾸안꾸)"]
             }
         };
 
@@ -53,48 +49,47 @@
                     image: "picture/baon.webp"},
                 "팜므뮤즈(빈티지, 러블리)": {                    
                     link: "https://femmemuse.co.kr/",
-                    
-                    image: "https://ibb.co/JjxNxnZ" },
+                    image: "picture/famme.jpg" },
                 "본지샵(캐주얼)":{                    
                     link: "https://bonzishop.com/",                    
                     image: "https://bonzishop.com/web/product/big/202308/0ae9c289e10acdc05a9d38e51834e7cd.gif"},
                 "제이탐탐(페미닌)" :{                
                     link:"https://jtamtam.co.kr/",                    
-                    image: "https://jtamtam.co.kr/web/upload/category/editor/2023/08/20/7e52a1788be186f9e04648cd29235351.jpg"},
-                "오도어(섹시힙, 트렌디)":{
+                    image: "picture/jtamtam.jpg"},
+                "오도어(섹시힙)":{
                     link:"https://m.odorshop.co.kr/",                    
                     image: "https://m.odorshop.co.kr/web/product/big/202307/235c34b0fde302c953c4e6f5f0a70c2e.jpg"},
-                "샵베일(트렌디, 데일리힙)":{
+                "샵베일(트렌디)":{
                     link:"https://m.shop-veil.co.kr/",
                     image: "https://m.shop-veil.co.kr/web/product/big/202306/b5aaac9d62e7e48bf5eddec1bb5aff8e.webp"},
-                "스니즈(걸리시, 키치)":{
+                "스니즈(걸리시)":{
                     link:"https://sneeze.kr/",
                     image:"https://sneeze.kr/web/product/medium/202211/984bdf28eebb11062ebd4900661d9f8d.jpg" },
-                "엠언어스(베이직, 놈코어)":{
+                "엠언어스(베이직)":{
                     link: "https://mnus.kr/",
                     image: "https://mnus.kr/web/product/medium/202305/e7351583a1b52d1e60e748f19d42e213.webp" },
-                "뮬랑(포멀, 클래식)": {
+                "뮬랑(포멀)": {
                     link:"https://mullang.com/",
                     image: "https://mullang.com/web/product/medium/202306/c3bead223943de2df9b40ba20805b632.webp" },
                 "플라시드(미니멀 시크)":{
                     link: "http://placid.kr/",
                     image: "https://cdn.imweb.me/thumbnail/20230730/0f3651e9b264d.jpeg" },
-                "베리유(페미닌, 프렌치시크)":{
+                "베리유(페미닌)":{
                     link:"https://veryyou.co.kr/?gclid=Cj0KCQjw0IGnBhDUARIsAMwFDLmOl6Uih977lYUm0XHoR6b1se87SXEkNJ4sK3rrGTd-TCt222-Dwv4aArLQEALw_wcB",
                     image: "https://www.veryyou.co.kr/web/product/medium/202308/68cd78dc1a7c540f37ae4bb64dc18501.jpg"},
-                "그레이시크(꾸안꾸, 데일리룩)-77사이즈":{
+                "그레이시크(꾸안꾸)":{
                     link: "https://graychic.co.kr/",
-                    image: "https://ibb.co/NpZQyvD"},
-                "안나앤블루(클래식캐주얼, 프렌치시크)":{
+                    image: "picture/made.jpg"},
+                "안나앤블루(클래식캐주얼)":{
                     link:"http://www.annanblue.com/",
                     image: "http://www.annanblue.com/shopimages/annanblue/0260010002622.jpg?1674795995"},
-                "더애수(꾸안꾸, 데일리룩)":{
+                "더애수(꾸안꾸)":{
                     link: "https://aesoo.co.kr/",
                     image: "https://aesoo.co.kr/web/product/medium/202308/5fffbc0b5ffda79bba223b8227e1a62b.gif" },
                 "aboki":{
                     link:"https://www.aboki.net/",
                     image: "picture/aboki.jpg" },
-                "coor (오래입을 제품, 10만원 정도 가격대)": {
+                "coor (오래입을 제품)": {
                     link:"https://coor.kr/",
                     image: "https://coor.kr/web/product/extra/big/202304/828ee550145b731fffb6a4b0fa2e63a1.jpg"},
                 "빈티지톡": {
@@ -102,7 +97,7 @@
                     image: "https://vintagetalk.co.kr/web/product/medium/%EA%B0%8068266_1.jpg"},
                 "yurue(남친룩)":{
                     link:"https://yurue.co.kr/",
-                    image: "https://yurue.co.kr/web/upload/category/editor/2023/08/21/7a68e7bd163d1449d6f0aeff32a10864.jpg"},
+                    image: "picture/yurue.jpg"},
                 "구아뽀": {
                     link:"https://www.guapo2u.com/", 
                     image: "picture/guapho.jpg"}
