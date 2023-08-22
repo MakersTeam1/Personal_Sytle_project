@@ -71,8 +71,13 @@
 
 </div>
 
-
+    
+    
     <div id="chat" class="chat-container" style="display: none;">
+        <div class = "chatting">
+            <P class="chat-title">Chat with STYLY</P>
+            <P class="chat-subtitle">let’s chat with Style recommendation AI!</P>
+        </div>
         <div class="chat-box">
             <div class="chat-message assistant">
                 <p class="assistant">퍼스널 컬러와 스타일링에 대해 궁금한 점을 물어보세요!</p>
@@ -82,8 +87,8 @@
             <i class="fa fa-spinner fa-spin"></i>
         </div>
         <div class="chat-input">
-            <input type="text" placeholder="스타일리에게 하고 싶은 말을 적어주세요!">
-            <button id="btn" onclick="spinner()">보내기</button>
+            <input type="text" placeholder="Type your message here...">
+            <button id="btn" onclick="spinner()">send</button>
         </div>
         <button onclick="location.href='index.html'" class="home-button">홈으로 돌아가기</button>
     </div>
@@ -127,7 +132,7 @@
             }
 
             document.getElementById("intro").style.display = "none";
-            document.getElementById("chat").style.display = "block";
+            document.getElementById("chat").style.display = "flex";
         }
 
         const sendMessage = async () => {
