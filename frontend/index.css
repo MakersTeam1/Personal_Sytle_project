@@ -60,13 +60,13 @@
     margin: 0;
     padding-top: 90px;
     color: #000;
+    opacity: 70%;
     text-align: center;
     font-family: 'Almarai', sans-serif;
     font-size: 32px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    filter: blur(1px);
     top: 30px;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -150,8 +150,8 @@ select{
 .main-display{
     display: flex;
     margin-top: -100px;
-    margin-right: 100px;
-    margin-left: 100px;
+    margin-right: 200px;
+    margin-left: 200px;
 
 }
 
@@ -240,7 +240,7 @@ select{
 
 
 .sub-exp{
-    margin-top: 10px;
+    margin-top: 45px;
     margin-left: 200px;
     margin-right: 200px;
     display: flex;
@@ -250,7 +250,7 @@ select{
     color: rgba(0, 0, 0, 0.34);
     text-align: center;
     font-family: 'Almarai';
-    font-size: 20px;
+    font-size: 30px;
     font-style: normal;
     font-weight: 300;
     line-height: normal;
@@ -291,6 +291,7 @@ select{
   }
 
   .chat-box {
+    height: 480px;
     margin-top: 30px;
     background-color: #ffffff;
     padding: 30px 145px;
@@ -400,7 +401,8 @@ margin-top: auto;
   #loader {
       font-size: 25px;
       text-align: center;
-      color: #49bb8a;
+      color:#000;
+      margin-bottom: 15px;
   }
 
 .home-button{
