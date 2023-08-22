@@ -291,6 +291,7 @@ select{
   }
 
   .chat-box {
+    width: 650px;
     margin-left: 500px;
     margin-right: 500px;
     overflow-y: scroll;
